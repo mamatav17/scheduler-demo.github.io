@@ -1,17 +1,18 @@
 <head></head>
 <body>
-    
+  console.log('before the script');  
     <script src="https://ace-aaa--travelsb02.sandbox.my.site.com/prospects/lightning/lightning.out.js"</script>
+    console.log('inside the script');
 
 <script>
-
+console.log('after the script');
     var urlParams = new URLSearchParams(window.location.search);
     var websiteSource = urlParams.get('websiteSource');
     var trafficSource = urlParams.get('trafficSource');
     var trafficSourceCategory = urlParams.get('trafficSourceCategory');
     var TSTTripURL = urlParams.get('TSTTripURL');
     var tripCanvasURL = urlParams.get('tripCanvasURL');
-    
+    console.log('tripCanvasURL',tripCanvasURL);
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
         function() {                  // Callback once framework and app load
             $Lightning.createComponent(
